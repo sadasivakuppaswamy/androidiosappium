@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="os" value="android" />
+    <parameter name="env" value="qa" />
+
+    <listeners>
+        <listener class-name="retry.RetryListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/Projects/biluetest/src/test/java/testsuite/LoginTest.java">
+    <classes><class name="testsuite.LoginTest">
+        <!--<methods><include name="LoginVerification"/></methods>-->
+    </class>
+    </classes>
+</test>
+</suite>
