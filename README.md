@@ -117,11 +117,15 @@ Install <b> APK info </b> app to retrieve appPackage and appActivity for the app
 1) Start the Appium Server and connect with Real device/Emulator.
 2) Open Appium Inspector app and provide the appium server details and Desired Capabilities.
 3) Click on Start session which will start the appium inspector with layout shown below.
+   ![appium inspector](https://github.com/sadasivakuppaswamy/androidiosappium/assets/10988106/dd3ae360-060a-4d83-ab13-c909d3a08fe1)
 ##  Running tests through Maven
 
 :point_right: Run test using command `mvn clean test -Dos=Android -Denv=qa`
 
+
 ##  Running tests through testng xml
+
  Create or Select the required testng xml -> Right click and select Run
 
 ##  Extent reports are added and can be accessed under target folder
+![extent report](https://github.com/sadasivakuppaswamy/androidiosappium/assets/10988106/7445a00a-e4b0-4c3d-90d2-9dbc42030645)
