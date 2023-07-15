@@ -124,4 +124,4 @@ Install <b> APK info </b> app to retrieve appPackage and appActivity for the app
 ##  Running tests through testng xml
  Create or Select the required testng xml -> Right click and select Run
 
-##  Custom Configurations in config.properties
+##  Extent reports are added and can be accessed under target folder
