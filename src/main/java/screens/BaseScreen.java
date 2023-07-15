@@ -127,14 +127,18 @@ public class BaseScreen {
      * @param locator element to be found
      * @return WebElement if found else throws NoSuchElementException
      */
-    public WebElement findElement(By locator) {
+    public boolean isElementPresent(WebElement we)
+    {
+        int flag=0;
         try {
-            WebElement element = driver.findElement(locator);
-            return element;
+            we.getTagName();
         } catch (NoSuchElementException e) {
-            //Log.logError(this.getClass().getName(), "findElement", "Element not found" + locator);
-            throw e;
+            flag = 1;
         }
+        if (flag == 1)
+            return true;
+        else
+            return false;
     }
 
     /**
@@ -212,27 +216,6 @@ public class BaseScreen {
     }
 
 
-    /**
-     * method to set network settings
-     *
-     * @param airplaneMode pass true to activate airplane mode else false
-     * @param wifi         pass true to activate wifi mode else false
-     * @param data         pass true to activate data mode else false
-     */
-    public void setNetworkConnection(boolean airplaneMode, boolean wifi, boolean data) {
-
-        long mode = 1L;
-
-        if (wifi) {
-            mode = 2L;
-        } else if (data) {
-            mode = 4L;
-        }
-
-        ConnectionState connectionState = new ConnectionState(mode);
-        ((AndroidDriver) driver).setConnection(connectionState);
-        System.out.println("Your current connection settings are :" + ((AndroidDriver) driver).getConnection());
-    }
 
 
     /**
