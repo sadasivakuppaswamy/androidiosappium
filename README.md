@@ -9,13 +9,23 @@ This will have common functionality of android and iOS automation using appium
    and [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 2) Install [NodeJS](https://nodejs.org/en/download/)
 3) Install [Android studio](https://developer.android.com/studio)
-4) Install Appium Server using npm (CLI) command `npm install -g appium`. Appium server version 1.22.1
-
+4) Install Appium Server using npm (CLI) command `npm install -g appium`. 
+Appium server version 1.22.1
 ```
 Command to check the installed appium version: `appium --version`
 ```
+5) Install Appium plugin required and use plugin while statrting server
+```
+    # To install an officially supported plugin
+      appium plugin install images
+      appium server --use-plugins=device-farm,images
+```
 
-5) Add below Android SDK path in the environment variable
+6) Install uiautomator2 driver
+```
+   appium driver install uiautomator2
+```
+7) Add below Android SDK path in the environment variable
 
 ```
     - ANDROID_HOME = <path to Sdk folder>
@@ -27,7 +37,7 @@ Command to check the installed appium version: `appium --version`
 6) Install [Appium desktop](https://github.com/appium/appium-desktop/releases/)
 7) Install [Appium Inspector](https://github.com/appium/appium-inspector/releases)
 
-## :rocket: Quick Start - Appium set up on MAC (Android):
+##  Quick Start - Appium set up on MAC (Android):
 
 1) Install Homebrew
 2) Install [NodeJS](https://nodejs.org/en/download/)
@@ -112,7 +122,6 @@ Install <b> APK info </b> app to retrieve appPackage and appActivity for the app
 :point_right: Run test using command `mvn clean test -Dos=Android -Denv=qa`
 
 ##  Running tests through testng xml
-
-:point_right: Create or Select the required testng xml -> Right click and select Run
+ Create or Select the required testng xml -> Right click and select Run
 
 ##  Custom Configurations in config.properties
