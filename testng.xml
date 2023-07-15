@@ -5,7 +5,7 @@
     <parameter name="env" value="qa" />
 
     <listeners>
-        <listener class-name="retry.RetryListener"/>
+        <listener class-name="retry.TestListner"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="D:/Projects/biluetest/src/test/java/testsuite/LoginTest.java">
     <classes><class name="testsuite.LoginTest">

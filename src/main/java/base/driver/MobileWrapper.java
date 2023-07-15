@@ -267,6 +267,9 @@ public class MobileWrapper {
             }
         }
 
-
+    public WebDriver getDriver() {
+        return driver;
+    }
 
     }
+
